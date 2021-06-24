@@ -1,0 +1,35 @@
+﻿<Window x:Class="MyBookshelf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyBookshelf"
+        mc:Ignorable="d"
+        Title="Книжная полка" Height="478.093" Width="1326.27" FontSize="16" FontFamily="Arial" FontWeight="Bold" FontStyle="Italic">
+    <Canvas   >
+        <Canvas.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF004064" Offset="0.955"/>
+                <GradientStop Color="#FF0098D0" Offset="0.431"/>
+                <GradientStop Color="#FF005D88" Offset="0.243"/>
+            </LinearGradientBrush>
+        </Canvas.Background>
+
+
+        <Label Content="Название книги:" Grid.Column="0" Grid.Row="0" Canvas.Left="7" Canvas.Top="15" FontSize="14" Foreground="#FFFECB00"/>
+        <TextBox Name="tbTitle" Grid.Column="1"  Grid.Row="0" Canvas.Left="7" Canvas.Top="44" Width="214" Height="35" />
+        <Label Content="Автор книги:" Grid.Column="0" Grid.Row="1" Canvas.Left="10" Canvas.Top="84" FontSize="14" Foreground="#FFFECB00"/>
+        <TextBox Name="tbAuthor" Grid.Column="1"  Grid.Row="1" Canvas.Left="7" Canvas.Top="113"  Width="214" Height="35"/>
+        <Label Content="Жанр книги:" Grid.Column="0" Grid.Row="2" Canvas.Left="9" Canvas.Top="219" FontSize="14" Foreground="#FFFECB00"/>
+        <TextBox Name="tbGenre" Grid.Column="1"  Grid.Row="2" Canvas.Left="7" Canvas.Top="248"  Width="170" Height="35" />
+        <Label Content="Год издания книги:" Grid.Column="0" Grid.Row="3" Canvas.Left="7" Canvas.Top="153" FontSize="14" Foreground="#FFFECB00"/>
+        <TextBox Name="tbDate" Grid.Column="1"  Grid.Row="3" Canvas.Left="7" Canvas.Top="181" Width="170" Height="35" RenderTransformOrigin="0.521,-2.517" />
+        <Button x:Name="btnAddBook"  Content="Добавить книгу" Grid.Column="1" Grid.Row="4" Click="btnAddBook_Click" Canvas.Left="12" Canvas.Top="386" Height="35" Width="165" Background="#FFFECB00" Foreground="#FFCE2F45" />
+        <DataGrid Name="dtBooks" Grid.Row="5" Grid.ColumnSpan="2" SelectionChanged="dtBooks_SelectionChanged" Height="429" Canvas.Left="583" Canvas.Top="10" Width="727" />
+        <Button x:Name="btnUpdate"  Content="Изменить данные" Grid.Column="1" Grid.Row="4" Click="btnUpdate_Click" Canvas.Left="201" Canvas.Top="386" Height="35" Width="165" Background="#FFFECB00" Foreground="#FFCE2F45"  />
+        <Button x:Name="btnDelete"  Content="Удалить данные" Grid.Column="1" Grid.Row="3"  Grid.RowSpan="2" Click="btnDelete_Click" Canvas.Left="392" Canvas.Top="386" Height="35" Width="165" Background="#FFFECB00" Foreground="#FFCE2F45"  />
+        <RichTextBox x:Name="tbDescription"  Height="239" Width="296" Canvas.Left="245" Canvas.Top="44"/>
+        <Label Content="Описание:" Canvas.Left="245" Canvas.Top="15" FontSize="14" Foreground="#FFFECB00"/>
+        <Button Content="Назад" Canvas.Left="466" Canvas.Top="10" Width="75" Click="Button_Click" Background="#FFFECB00" Foreground="#FFCE2F45"/>
+    </Canvas>
+</Window>
